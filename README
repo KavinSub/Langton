@@ -1,5 +1,5 @@
 This is my implementation of Langton's Ant. Langton's Ant is a type of Turing Machine. In the same vein of something like Conway's game of life,
-there are a few simple rules by which the ants abide by which result in complex patterns. 
+there are a few simple rules which the ants abide by, that in turn result in complex patterns. 
 
 For more information: https://en.wikipedia.org/wiki/Langton%27s_ant
 
