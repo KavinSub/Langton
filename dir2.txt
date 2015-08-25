@@ -1,0 +1,12 @@
+white right
+black right
+blue left
+cyan left
+dark_gray left
+gray right
+green left
+light_gray left
+magenta left
+orange right
+pink right
+red right

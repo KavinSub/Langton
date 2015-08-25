@@ -1,0 +1,12 @@
+White black
+black blue
+blue cyan
+cyan dark_gray
+dark_gray gray
+gray green
+green light_gray
+light_gray magenta
+magenta orange
+orange pink
+pink red
+red white

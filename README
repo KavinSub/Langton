@@ -1,0 +1,91 @@
+This is my implementation of Langton's Ant. Langton's Ant is a type of Turing Machine. In the same vein of something like Conway's game of life,
+there are a few simple rules by which the ants abide by which result in complex patterns. 
+
+For more information: https://en.wikipedia.org/wiki/Langton%27s_ant
+
+To run this program, enter the following on the command line:
+
+java -jar [filename] [c] [tile map] [direction map]
+
+Example: java -jar test.txt c tile.txt dir.txt
+
+If filename is left blank, test.txt will be used by default.
+If the c option is specified, then custom mappings will be used (explained further down). If c is specified, and either the tile map and direction map
+are unspecified tile.txt and dir.txt will be used by default.
+
+
+//****************************************************************************************
+*
+*								Creating a field file
+*
+//****************************************************************************************
+
+The file for the field should be in the following format:
+
+rows cols [empty]
+[field(array of numbers)]
+Ant row col
+Ant row col
+	.
+	.
+	.
+Ant row col
+
+If the empty option is set, then a field array is not necessary. The starting field will just be a grid of white squares in that case. If no ants are specified, one will be created by default at row 0, col 0.
+The c option refers to custom mappings. Normally the mapping is as follows:
+
+White -> Black, Ant rotates 90 degrees right
+Black -> White, Ant rotates 90 degrees left
+
+
+//****************************************************************************************
+*
+*								Creating a custom mapping
+*
+//****************************************************************************************
+
+You can create your own mappings from a selection of colors as follows. You'll notice that there are two files named tile.txt and dir.txt.
+
+tile.txt refers to the mappings the colors follow, what each color turns into. It should be in the following format:
+
+Color Color
+Color Color
+	.
+	.
+	.
+Color Color
+
+Note that you do not have to use all 13 colors available, but a color may not map to more than one color.
+
+The second component to a custom mapping is a direction mapping. For this you use dir.txt via the following format: 
+
+Color direction
+Color direction
+	.
+	.
+	.
+Color direction
+
+Where direction may be left or right. Every color you used in tile.txt must be mapped to a direction, or you will get an error.
+
+The following colors may be used (not case-sensitive, underscore must be included if applicable):
+
+WHITE = 0
+BLACK = 1
+BLUE = 2
+CYAN = 3
+DARK_GRAY = 4
+GRAY = 5
+GREEN = 6
+LIGHT_GRAY = 7
+MAGENTA = 8
+ORANGE = 9
+PINK = :
+RED = ;
+YELLOW = <
+
+The characters correspond to the colors that are used for the field. 
+
+For more info on custom mappings check the Extensions to Multiple Colors section on the wikipedia page.
+
+Currently the default dir.txt and tile.txt use a cyclic pattern called LLRR which causes the mass to proliferate symmetrically.
