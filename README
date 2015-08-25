@@ -5,7 +5,7 @@ For more information: https://en.wikipedia.org/wiki/Langton%27s_ant
 
 To run this program, enter the following on the command line:
 
-java -jar [filename] [c] [tile map] [direction map]
+java -jar LangtonAnt.jar [filename] [c] [tile map] [direction map]
 
 Example: java -jar test.txt c tile.txt dir.txt
 
