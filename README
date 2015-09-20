@@ -7,7 +7,7 @@ To run this program, enter the following on the command line:
 
 java -jar LangtonAnt.jar [filename] [c] [tile map] [direction map]
 
-Example: java -jar test.txt c tile.txt dir.txt
+Example: java -jar LangtonAnt.jar test.txt c tile.txt dir.txt
 
 If filename is left blank, test.txt will be used by default.
 If the c option is specified, then custom mappings will be used (explained further down). If c is specified, and either the tile map and direction map
